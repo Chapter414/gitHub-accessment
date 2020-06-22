@@ -2,7 +2,7 @@ const {Builder, By, Key,util} = require("selenium-webdriver");
 async function testing() {
     let driver = await new Builder().forBrowser("firefox").build();
     try {
-        await driver.get("http://www.way2automation.com/angularjs-protractor/webtables/");
+        await driver.get("https://www.way2automation.com/angularjs-protractor/webtables/");
         await driver.findElement(By.css("body > table > thead > tr:nth-child(2) > td > button")).click();
         await driver.findElement(By.name("FirstName")).sendKeys("Anthony");
         await driver.findElement(By.name("LastName")).sendKeys("Omotola");
