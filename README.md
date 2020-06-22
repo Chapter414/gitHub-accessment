@@ -1,2 +1,1 @@
-# gitHub-accessment
-Test 1010
+Navigate to the http://www.way2automation.com/angularjs-protractor/webtables/ to add a new user with valid details and to validate these details.
