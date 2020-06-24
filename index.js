@@ -10,7 +10,6 @@ async function createUser(firstname, lastname, username, password, option, selec
         await driver.findElement(By.name("LastName")).sendKeys(lastname);
         await driver.findElement(By.name("UserName")).sendKeys(username);
         await driver.findElement(By.name("Password")).sendKeys(password);
-        //await driver.findElement(By.name("optionsRadios")).click();
         await driver.findElement(By.css('input[type="radio"][value="'+option+'"]')).click()
         await driver.findElement(By.css(selected)).click();
         await driver.findElement(By.name("Email")).sendKeys(email);
