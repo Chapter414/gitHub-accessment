@@ -1,4 +1,4 @@
-const {Builder, By, Key,util} = require("selenium-webdriver");
+const {Builder, By} = require("selenium-webdriver");
 async function testing() {
     let driver = await new Builder().forBrowser("firefox").build();
     try {
@@ -8,8 +8,8 @@ async function testing() {
         await driver.findElement(By.name("LastName")).sendKeys("LName1");
         await driver.findElement(By.name("UserName")).sendKeys("User1");
         await driver.findElement(By.name("Password")).sendKeys("Pass1");
-        await driver.findElement(By.className("ng-valid ng-dirty").value("Company AAA")).click();
-        await driver.findElement(By.css("body > div.modal.ng-scope > div.modal-body > form > table > tbody > tr:nth-child(6) > td:nth-child(2) > select").value("Admin"));
+        await driver.findElement(By.name("optionsRadios")).click();
+        await driver.findElement(By.css("body > div.modal.ng-scope > div.modal-body > form > table > tbody > tr:nth-child(6) > td:nth-child(2) > select > option[value=\"2\"]")).click();
         await driver.findElement(By.name("Email")).sendKeys("admin@mail.com");
         await driver.findElement(By.name("Mobilephone")).sendKeys("082555");
         await driver.findElement(By.className("btn btn-success")).click();
