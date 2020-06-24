@@ -10,7 +10,8 @@ async function createUser(firstname, lastname, username, password, option, selec
         await driver.findElement(By.name("LastName")).sendKeys(lastname);
         await driver.findElement(By.name("UserName")).sendKeys(username);
         await driver.findElement(By.name("Password")).sendKeys(password);
-        await driver.findElement(By.name("optionsRadios")).click();
+        //await driver.findElement(By.name("optionsRadios")).click();
+        await driver.findElement(By.css('input[type="radio"][value="'+option+'"]')).click()
         await driver.findElement(By.css(selected)).click();
         await driver.findElement(By.name("Email")).sendKeys(email);
         await driver.findElement(By.name("Mobilephone")).sendKeys(mobile);
@@ -20,5 +21,5 @@ async function createUser(firstname, lastname, username, password, option, selec
     }
 }
 
-//createUser("FName1", "LName1", "User1", "Pass1" ,"", "2", "admin@mail.com", "082555");
-await createUser("FName2", "LName2", "User2", "Pass2" ,"", "1", "customer@mail.com", "083444");
+//createUser("FName1", "LName1", "User1", "Pass1" ,"15", "2", "admin@mail.com", "082555");
+createUser("FName2", "LName2", "User2", "Pass2" ,"16", "1", "customer@mail.com", "083444");
